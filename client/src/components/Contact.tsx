@@ -34,7 +34,7 @@ export function Contact() {
           </Button>
           
           <Button variant="outline" asChild>
-            <a href="https://youtube.com/c/HigherPlusMedia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="https://www.youtube.com/@higherplusmedia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Youtube className="h-4 w-4" />
               Higher+ Media
             </a>
