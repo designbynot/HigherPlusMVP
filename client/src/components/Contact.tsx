@@ -15,13 +15,13 @@ export function Contact() {
         </motion.h2>
         
         <motion.div 
-          className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12"
+          className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 w-full max-w-2xl mx-auto"
           {...fadeIn}
           transition={{ delay: 0.2 }}
         >
           <Button 
             variant="secondary" 
-            className="bg-white hover:bg-gray-100 text-black"
+            className="bg-white hover:bg-gray-100 text-black font-medium w-full md:w-auto flex items-center justify-center gap-2"
             asChild
           >
             <a href="mailto:team@higher.plus" className="flex items-center gap-2">
@@ -32,7 +32,7 @@ export function Contact() {
           
           <Button 
             variant="secondary" 
-            className="bg-white hover:bg-gray-100 text-black"
+            className="bg-white hover:bg-gray-100 text-black font-medium w-full md:w-auto flex items-center justify-center gap-2"
             asChild
           >
             <a href="https://twitter.com/higherplus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
@@ -43,7 +43,7 @@ export function Contact() {
           
           <Button 
             variant="secondary" 
-            className="bg-white hover:bg-gray-100 text-black"
+            className="bg-white hover:bg-gray-100 text-black font-medium w-full md:w-auto flex items-center justify-center gap-2"
             asChild
           >
             <a href="https://www.youtube.com/@higherplusmedia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
