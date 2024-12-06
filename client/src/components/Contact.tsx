@@ -11,7 +11,7 @@ export function Contact() {
           className="text-4xl font-bold mb-8"
           {...fadeIn}
         >
-          Let's Build Together
+          Let's Go Higher
         </motion.h2>
         
         <motion.div 
@@ -52,7 +52,7 @@ export function Contact() {
             className="h-8 mx-auto"
           />
           <p className="text-sm text-gray-400">
-            Elevating the Creative Class
+            Tagging the Internet
           </p>
         </motion.div>
       </div>

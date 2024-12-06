@@ -13,7 +13,7 @@ export function Media() {
           whileInView="whileInView"
         >
           <h2 className="text-4xl font-bold mb-4">Higher+ Radio</h2>
-          <p className="text-lg text-gray-600">A soundscape for the Higher+ ethos</p>
+          <p className="text-lg text-gray-600">Good music you should listen to</p>
         </motion.div>
         
         <motion.div
