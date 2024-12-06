@@ -16,7 +16,7 @@ export function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <img
-          src="/black-unicorn.png"
+          src="/pegasus-in-color-field.png"
           alt="Black Unicorn"
           className="w-full h-full object-cover"
         />
@@ -39,7 +39,7 @@ export function Hero() {
           className="text-4xl md:text-6xl font-bold text-white"
           variants={textVariant}
         >
-          Creative Factory // On My Higher Horses
+          Higher's Creative Factory
         </motion.h1>
         
         <motion.div
