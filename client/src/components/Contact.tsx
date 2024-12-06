@@ -19,21 +19,33 @@ export function Contact() {
           {...fadeIn}
           transition={{ delay: 0.2 }}
         >
-          <Button variant="outline" asChild>
+          <Button 
+            variant="secondary" 
+            className="bg-white hover:bg-gray-100 text-black"
+            asChild
+          >
             <a href="mailto:team@higher.plus" className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
               team@higher.plus
             </a>
           </Button>
           
-          <Button variant="outline" asChild>
+          <Button 
+            variant="secondary" 
+            className="bg-white hover:bg-gray-100 text-black"
+            asChild
+          >
             <a href="https://twitter.com/higherplus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Twitter className="h-4 w-4" />
               @higherplus
             </a>
           </Button>
           
-          <Button variant="outline" asChild>
+          <Button 
+            variant="secondary" 
+            className="bg-white hover:bg-gray-100 text-black"
+            asChild
+          >
             <a href="https://www.youtube.com/@higherplusmedia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <Youtube className="h-4 w-4" />
               Higher+ Media
