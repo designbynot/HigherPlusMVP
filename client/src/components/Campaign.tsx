@@ -5,19 +5,19 @@ import { fadeIn, staggerContainer, scaleIn, textVariant } from "../lib/animation
 const campaignImages = [
   {
     src: "/black-unicorn.png",
-    caption: "Bold creativity in timeless narratives"
+    caption: "Embrace new technology"
   },
   {
     src: "/chrome-horse.png",
-    caption: "Reflecting innovation and artistic vision"
+    caption: "Stand out from the crowd"
   },
   {
     src: "/unicorn-running-in-flowers.png",
-    caption: "Freedom in creative expression"
+    caption: "Run towards your dream life"
   },
   {
     src: "/colorful-horses-head.png",
-    caption: "Elevating stories beyond boundaries"
+    caption: "Go higher together"
   }
 ];
 
