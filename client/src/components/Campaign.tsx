@@ -47,21 +47,41 @@ export function Campaign() {
                 key={index}
                 variants={scaleIn}
               >
-                <Card className="group relative overflow-hidden aspect-square">
+                <Card 
+                  className="group relative overflow-hidden aspect-square cursor-pointer"
+                  onClick={() => {
+                    // Open in lightbox or modal view
+                    window.open(image.src, '_blank', 'noopener,noreferrer');
+                  }}
+                >
                   <motion.img
                     src={image.src}
                     alt={image.caption}
-                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-110"
                     whileHover={{ scale: 1.1 }}
+                    layoutId={`campaign-image-${index}`}
                   />
                   <motion.div 
-                    className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-end p-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileHover={{ opacity: 1, y: 0 }}
                   >
-                    <p className="text-white text-xl font-medium text-center px-6">
+                    <motion.p 
+                      className="text-white text-xl font-medium text-center"
+                      initial={{ y: 20, opacity: 0 }}
+                      whileHover={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.1 }}
+                    >
                       {image.caption}
-                    </p>
+                    </motion.p>
+                    <motion.p 
+                      className="text-white/80 text-sm mt-2"
+                      initial={{ y: 20, opacity: 0 }}
+                      whileHover={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      Click to expand
+                    </motion.p>
                   </motion.div>
                 </Card>
               </motion.div>
