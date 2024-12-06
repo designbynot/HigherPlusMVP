@@ -31,7 +31,7 @@ export function Media() {
             </div>
             <iframe
               className="w-full h-full absolute inset-0"
-              src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID"
+              src="https://www.youtube.com/embed/videoseries?list=PL3Uwn9uK5dyjXeQmZ_JJXFMNTG70GBSbn"
               title="Higher+ Radio"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
