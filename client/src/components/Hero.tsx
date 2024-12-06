@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { fadeIn } from "../lib/animations";
+import { fadeIn, staggerContainer, scaleIn, textVariant } from "../lib/animations";
 
 export function Hero() {
   const scrollToCampaign = () => {
@@ -11,9 +11,9 @@ export function Hero() {
     <section className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
       <motion.div 
         className="absolute inset-0 z-0"
-        initial={{ scale: 1.1, opacity: 0 }}
+        initial={{ scale: 1.2, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <img
           src="/black-unicorn.png"
@@ -22,36 +22,39 @@ export function Hero() {
         />
       </motion.div>
       
-      <div className="relative z-10 text-center space-y-8">
+      <motion.div 
+        className="relative z-10 text-center space-y-8"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="whileInView"
+      >
         <motion.img
           src="/higher+.png"
           alt="Higher+"
           className="h-24 mx-auto"
-          {...fadeIn}
+          variants={scaleIn}
         />
         
         <motion.h1 
           className="text-4xl md:text-6xl font-bold text-white"
-          {...fadeIn}
-          transition={{ delay: 0.2 }}
+          variants={textVariant}
         >
           Creative Factory // On My Higher Horses
         </motion.h1>
         
         <motion.div
-          {...fadeIn}
-          transition={{ delay: 0.4 }}
+          variants={fadeIn}
         >
           <Button 
             variant="outline" 
             size="lg"
             onClick={scrollToCampaign}
-            className="bg-white/90 hover:bg-white text-black"
+            className="bg-white/90 hover:bg-white text-black transform transition-transform hover:scale-105"
           >
             Enter the Factory
           </Button>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

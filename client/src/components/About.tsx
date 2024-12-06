@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../lib/animations";
+import { fadeIn, staggerContainer, textVariant } from "../lib/animations";
 
 export function About() {
   return (
@@ -7,14 +7,17 @@ export function About() {
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <motion.h2 
           className="text-4xl font-bold mb-8"
-          {...fadeIn}
+          variants={textVariant}
+          initial="initial"
+          whileInView="whileInView"
         >
           What is Higher+?
         </motion.h2>
         
         <motion.div
-          {...fadeIn}
-          transition={{ delay: 0.2 }}
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
         >
           <p className="text-xl leading-relaxed">
             Higher+ is a Creative Factory empowering visionaries to build systems, tools, and stories that resonate.

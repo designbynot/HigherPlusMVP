@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { fadeIn } from "../lib/animations";
+import { fadeIn, staggerContainer, scaleIn, textVariant } from "../lib/animations";
 
 const campaignImages = [
   {
@@ -26,34 +26,45 @@ export function Campaign() {
     <section id="campaign" className="py-20 bg-white">
       <motion.h2 
         className="text-4xl font-bold text-center mb-12"
-        {...fadeIn}
+        variants={textVariant}
+        initial="initial"
+        whileInView="whileInView"
       >
         On My Higher Horses
       </motion.h2>
       
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+        >
           {campaignImages.map((image, index) => (
             <motion.div
               key={index}
-              {...fadeIn}
-              transition={{ delay: index * 0.1 }}
+              variants={scaleIn}
             >
               <Card className="group relative overflow-hidden aspect-square">
-                <img
+                <motion.img
                   src={image.src}
                   alt={image.caption}
-                  className="w-full h-full object-cover transform transition-transform group-hover:scale-105"
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  whileHover={{ scale: 1.1 }}
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <motion.div 
+                  className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                >
                   <p className="text-white text-xl font-medium text-center px-6">
                     {image.caption}
                   </p>
-                </div>
+                </motion.div>
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

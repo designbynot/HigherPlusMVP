@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { fadeIn } from "../lib/animations";
+import { fadeIn, staggerContainer, textVariant } from "../lib/animations";
 
 export function Media() {
   return (
@@ -8,15 +8,18 @@ export function Media() {
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
-          {...fadeIn}
+          variants={textVariant}
+          initial="initial"
+          whileInView="whileInView"
         >
           <h2 className="text-4xl font-bold mb-4">Higher+ Radio</h2>
           <p className="text-lg text-gray-600">A soundscape for the Higher+ ethos</p>
         </motion.div>
         
         <motion.div
-          {...fadeIn}
-          transition={{ delay: 0.2 }}
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
         >
           <Card className="relative overflow-hidden aspect-video">
             <div className="absolute inset-0 opacity-10">
