@@ -8,15 +8,15 @@ const campaignImages = [
     caption: "Bold creativity in timeless narratives"
   },
   {
-    src: "/chrome-horse.jpeg",
+    src: "/chrome-horse.png",
     caption: "Reflecting innovation and artistic vision"
   },
   {
-    src: "/unicorn-running-in-flowers.jpeg",
+    src: "/unicorn-running-in-flowers.png",
     caption: "Freedom in creative expression"
   },
   {
-    src: "/pegasus-in-color-field.jpeg",
+    src: "/pegasus-in-color-field.png",
     caption: "Elevating stories beyond boundaries"
   }
 ];
