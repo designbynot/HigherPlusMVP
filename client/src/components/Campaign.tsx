@@ -16,7 +16,7 @@ const campaignImages = [
     caption: "Freedom in creative expression"
   },
   {
-    src: "/pegasus-in-color-field.png",
+    src: "/colorful-horses-head.png",
     caption: "Elevating stories beyond boundaries"
   }
 ];
@@ -30,7 +30,7 @@ export function Campaign() {
         initial="initial"
         whileInView="whileInView"
       >
-        On My Higher Horses
+        Higher Horses
       </motion.h2>
       
       <div className="container mx-auto px-4">
